@@ -30,9 +30,10 @@ List of databases
 ```
 \l
 ```
-\du
-```
+
 List of roles
+```
+\du
 ```
 
 ### Modify or Create  or Delete role
@@ -44,8 +45,8 @@ DROP USER (role);
 ```
 
 ### How to link pgAdmin 4 with postgres
-Open pgAdmin4, open a new server registration.
-Name : Localhost
-Host : 127.0.0.1 (Local Host)
-Username : (role with superuser in postgres)
-Password : (the one of the superuser)
+*Open pgAdmin4, open a new server registration.* \
+**Name :** Localhost \
+**Host :** 127.0.0.1 (Local Host) \
+**Username :** (role with superuser in postgres) \
+**Password :** (the one of the superuser)
