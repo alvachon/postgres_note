@@ -18,6 +18,7 @@ sudo apt-get install postgresql-(version)
 ### General information
 ```
 man psql
+psql --help 
 ``` 
 
 ### Calling the program
@@ -50,3 +51,34 @@ DROP USER (role);
 **Host :** 127.0.0.1 (Local Host) \
 **Username :** (role with superuser in postgres) \
 **Password :** (the one of the superuser)
+*Go to terminal* \
+```
+psql -h localhost -p 5432 -U (user) (database name)
+```
+
+## Creating or deleting a database
+```
+ CREATE DATABASE name_database; 
+ DROP DATABASE name_database;
+ ```
+ ## Moving into the database
+ ```
+ \c database_name
+ ```
+ 
+ ## How to create a table
+ ```
+ \c database_name
+ CREATE TABLE table_name ( #enter
+ Column_name data_type constraint_or_not,
+ id BIGSERIAL NOT NULL PRIMARY KEY,
+ first_name VARCHAR(50) NOT NULL,
+ last_name VARCHAR(50) NOT NULL,
+ date_of_birth DATE NOT NULL,
+ email VARCHAR(150));
+```
+## How to insert record into tables
+```
+INSERT INTO table_name (first_name, last_name, gender, date_of_birth)
+VALUES ('Anne', 'Smith', 'FEMALE', date '1988-01-09');
+```
