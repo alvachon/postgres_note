@@ -98,3 +98,13 @@ VALUES ('Anne', 'Smith', 'FEMALE', date '1988-01-09');
  ## How to sort distinct
  ```
 SELECT DISTINCT table_selection FROM table_name ORDER BY table_selection; 
+```
+## How to sort by some parts
+```
+SELECT * FROM person WHERE gender = 'Female';
+``` 
+## How to sort with AND or OR conditions
+```
+SELECT * FROM person WHERE gender = 'Male' AND (country_of_birth = 'Poland' OR country_of_birth = 'China');
+```
+ 
