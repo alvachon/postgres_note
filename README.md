@@ -65,6 +65,10 @@ psql -h localhost -p 5432 -U (user) (database name)
  ```
  \c database_name
  ```
+  ## Show all table into the database
+   ```
+   \dt
+    ```
  
  ## How to create a table
  ```
@@ -79,6 +83,16 @@ psql -h localhost -p 5432 -U (user) (database name)
 ```
 ## How to insert record into tables
 ```
-INSERT INTO table_name (first_name, last_name, gender, date_of_birth)
+INSERT INTO table_name (first_name, last_nam e, gender, date_of_birth)
 VALUES ('Anne', 'Smith', 'FEMALE', date '1988-01-09');
 ```
+## How to import from a file
+ ```  
+ \i /Users/../../blabla.sql
+ SELECT * FROM table_name;
+ ```
+ ## How to sort by order
+ ```
+ SELECT * FROM table_name ORDER BY table_section;
+  ```
+ 
