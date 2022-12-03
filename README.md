@@ -95,4 +95,6 @@ VALUES ('Anne', 'Smith', 'FEMALE', date '1988-01-09');
  ```
  SELECT * FROM table_name ORDER BY table_section;
   ```
- 
+ ## How to sort distinct
+ ```
+SELECT DISTINCT table_selection FROM table_name ORDER BY table_selection; 
