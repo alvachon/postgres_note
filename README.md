@@ -66,9 +66,9 @@ psql -h localhost -p 5432 -U (user) (database name)
  \c database_name
  ```
   ## Show all table into the database
-   ```
-   \dt
-    ```
+ ```
+ \dt
+ ```
  
  ## How to create a table
  ```
