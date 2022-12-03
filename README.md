@@ -103,8 +103,26 @@ SELECT DISTINCT table_selection FROM table_name ORDER BY table_selection;
 ```
 SELECT * FROM person WHERE gender = 'Female';
 ``` 
-## How to sort with AND or OR conditions
+## How to sort with AND or OR or IN conditions
 ```
 SELECT * FROM person WHERE gender = 'Male' AND (country_of_birth = 'Poland' OR country_of_birth = 'China');
+SELECT *
+FROM person
+WHERE country_of_birth IN ('China', 'Brazil', 'France')
+ORDER BY country_of_birth;  
 ```
+## How to sort with limit
+```
+ SELECT * FROM person LIMIT 10;
+ //To target the 5 next one
+ SELECT * FROM person OFFSET 5 LIMIT 5;
+ //SQL standard way : 
+ SELECT * FROM person OFFSET 5 FETCH FIRST 5 ROW ONLY;
+ ```
+ ## How to select data from a range
+ ```
+ SELECT * FROM person
+ WHERE date_of_birth
+ BETWEEN DATE '2000-01-01' AND '2015-01-01';
+ ``` 
  
