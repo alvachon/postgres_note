@@ -125,4 +125,15 @@ ORDER BY country_of_birth;
  WHERE date_of_birth
  BETWEEN DATE '2000-01-01' AND '2015-01-01';
  ``` 
- 
+ ## How to select similar element
+  ``` 
+  SELECT * FROM person WHERE email LIKE '%.com';
+  SELECT * FROM person WHERE email LIKE '_____';
+  ## Without uppercase sensitivites
+  SELECT * FROM person WHERE country_of_birth ILIKE 'p%';
+  ```
+  ## How to count items in each element table
+  ```
+  SELECT country_of_birth, COUNT(*) FROM person GROUP BY country_of_birth;
+  SELECT country_of_birth, COUNT(*) FROM person GROUP BY country_of_birth ORDER BY country_of_birth;
+  ```
