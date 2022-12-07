@@ -137,3 +137,23 @@ ORDER BY country_of_birth;
   SELECT country_of_birth, COUNT(*) FROM person GROUP BY country_of_birth;
   SELECT country_of_birth, COUNT(*) FROM person GROUP BY country_of_birth ORDER BY country_of_birth;
   ```
+  ## How to show count of each, with more than 5
+  ```
+  SELECT country_of_birth, COUNT(*) FROM person GROUP BY country_of_birth HAVING COUNT(*) > 5 ORDER BY country_of_birth;
+  ```
+  
+ ## Comparison operator
+ ```
+ SELECT 1 = 1;
+ ```
+ return t for true
+ ```
+ SELECT 1 < 1;
+ ```
+ return f for false
+ 
+ ## Function aggregation
+ * count(*)
+ * max
+ * min
+ 
